@@ -1,0 +1,24 @@
+{% extends 'home/base.html' %}
+{% block homeTab %}current-page{% endblock %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<br><br>
+    <div id="home">
+        <div class="row ">
+            {% for card in cards %}
+              <div class="col d-flex justify-content-around text-center mb-3">
+                <div class="card" style="min-width: 250px;" style="padding: 10em;">
+                  <img class="card-img-top" src="{{ card.image.url }}" alt="{{ card.title }}">
+                  <div class="card-body">
+                    <h5 class="card-title text-uppercase">{{ card.title }}</h5>
+                    <p class="card-text">{{ card.subtitle }}</p>
+                    <a href="{{ card.link }}"  class="central-button">{{ card.button_text }}</a>
+                  </div>
+                  </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+    </div>
+
+{% endblock %}

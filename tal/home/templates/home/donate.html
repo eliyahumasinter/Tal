@@ -1,0 +1,61 @@
+{% extends 'home/base.html' %}
+{% block donateTab %}current-page{% endblock %}
+
+{% block title %}Donate{% endblock %}
+{% block body %}
+<br><br>
+    <div id="donate" class="">
+        <h1 class="text-center">Help us keep 'DEW'ing</h1>
+        <h4 class="text-center py-3">Choose a donation amount</h4>
+        <form>
+          <div class="row justify-content-end" >
+
+            <div class="col-lg-4 d-flex justify-content-around ">
+              <label class="donate-amount">
+                <input type="radio"  name="donate-amount-name" value="100" >
+                <div class="donate-amount-div">
+                  <span>
+                    <span class="donate-figure">$100</span><br>
+                    Sponsor a TAL event
+                  </span>
+                </div>
+              </label>
+            </div>
+
+            <div class="col-lg-4 d-flex justify-content-around">
+              <label class="donate-amount">
+                <input type="radio"  name="donate-amount-name" value="200">
+                <div class="donate-amount-div">
+                    <span>
+                        <span class="donate-figure">$200</span><br>
+                        Sponsor a mentorship program
+                    </span>
+                </div>
+              </label>
+            </div>
+
+            <div class="col-lg-4 d-flex justify-content-around">
+              <label class="donate-amount">
+                <input type="radio"  name="donate-amount-name" value="300">
+                <div class="donate-amount-div">
+                    <span>
+                        <span class="donate-figure">$300</span><br>
+                        Sponsor a Shabbos Event
+                    </span>
+                </div>
+              </label>
+              </div>
+            </div>
+
+
+          <p class="text-center mt-2 "><a href="#" id="custom-donation-amount">Enter a custom donation amount</a></p>
+          <div class='row'>
+           <div class="col d-flex justify-content-around">
+            <input type="submit" value="Go to checkout" class="central-button yellow-button">
+           </div>
+          </div>
+        </form>
+    </div>
+  </div>
+
+{% endblock %}
